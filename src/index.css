@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 18%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -15,16 +15,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 214 88% 54%;
+    --primary: 0 73% 32%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 0 0% 18%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 0 0% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 214 88% 54%;
+    --accent: 43 75% 52%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -100,10 +100,45 @@
   body {
     @apply bg-background text-foreground font-inter;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Merriweather", serif;
+  }
 }
 
 @layer utilities {
   .font-inter {
     font-family: "Inter", sans-serif;
+  }
+  .font-merriweather {
+    font-family: "Merriweather", serif;
+  }
+  .text-harvard-red {
+    color: hsl(0 73% 32%);
+  }
+  .text-harvard-gold {
+    color: hsl(43 75% 52%);
+  }
+  .bg-harvard-red {
+    background-color: hsl(0 73% 32%);
+  }
+  .bg-harvard-gold {
+    background-color: hsl(43 75% 52%);
+  }
+  .border-harvard-red {
+    border-color: hsl(0 73% 32%);
+  }
+  .border-harvard-gold {
+    border-color: hsl(43 75% 52%);
+  }
+  .hover\:bg-harvard-red:hover {
+    background-color: hsl(0 73% 28%);
+  }
+  .hover\:bg-harvard-gold:hover {
+    background-color: hsl(43 75% 48%);
   }
 }
